@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multi-Step Signup Form</title>
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/multistepform/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <form id="msform">
+            <ul id="progressbar">
+                <li class="active">Step 1</li>
+                <li>Step 2</li>
+                <li>Step 3</li>
+                <li>Step 4</li>
+                <li>Step 5</li>
+            </ul>
+            <fieldset>
+                <h2 class="fs-title">Step 1/5 - Integrate new Fanpage</h2>
+                <span>Fanpage name</span>
+                <input type="text" name="channel" placeholder="Enter fanpage name ..."/>
+                <h4>Suggestions</h4>
+                <ul style="list-style-type: square">
+                    <li>Name of Facebook fanpage that you want to integrate</li>
+                </ul>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Step 2/5 - Integrate new Fanpage</h2>
+                <span>Facebook access token</span>
+                <input type="text" name="facebook" placeholder="Enter facebook access token ..."/>
+                <h4>Instruction</h4>
+                <ul style="list-style-type: square">
+                    <li>Login to <a href="https://developers.facebook.com">FB Developer</a> and create a new App</li>
+                    <li>Go to Setting Message of App Facebook</li>
+                    <li>Choose a Fanpage to generate access Token</li>
+                </ul>
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Step 3/5 - Integrate new Fanpage</h2>
+                <span>Verify token</span>
+                <input type="text" name="verify" placeholder="Enter verify token ..."/>
+                <h4>Instruction</h4>
+                <ul style="list-style-type: square">
+                    <li>Verify token of Facebook App and Server App</li>
+                </ul>
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Step 4/5 - Integrate new Fanpage</h2>
+                <span>Mattermost token</span>
+                <input type="text" name="mattermost" placeholder="Enter mattermost token ..."/>
+                <h4>Instruction</h4>
+                <ul style="list-style-type: square">
+                    <li>Click <a href="https://docs.mattermost.com/developer/personal-access-tokens.html">here</a> to
+                        get personal access token of MMC
+                    </li>
+                </ul>
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Step 5/5 - Integrate new Fanpage</h2>
+                <span>Default channel</span>
+                <input type="text" name="channel" placeholder="Enter default channel ..."/>
+                <h4>Suggestions</h4>
+                <ul style="list-style-type: square">
+                    <li>Default channel receives messages from Facebook</li>
+                </ul>
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="submit" name="submit" class="submit action-button" value="Submit"/>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/multistepform/js/msform.js"></script>
+</body>
+</html>
